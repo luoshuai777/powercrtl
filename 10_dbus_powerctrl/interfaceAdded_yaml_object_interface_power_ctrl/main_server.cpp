@@ -34,7 +34,6 @@ class Test : public TestInherit
             currentState("On");
 	infile.close();
 	memset(data,0,sizeof(data));
-	str.clear();
     }
     ~Test()
     {
