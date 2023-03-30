@@ -1,0 +1,22 @@
+description: >
+    Provide functions for testing interfaceAdded signal
+properties:
+    - name: FanCtrl0
+      type: string
+      description: >
+        A property
+
+    - name: FanCtrl1
+      type: string
+      description: >
+        A property
+
+    - name: FanCtrl2
+      type: string
+      description: >
+        A property
+
+    - name: FanCtrl3
+      type: string
+      description: >
+        A property
