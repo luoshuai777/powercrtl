@@ -1,0 +1,9 @@
+[Unit]
+Description=Host Power Check
+
+[Service]
+ExecStart=/usr/bin/env host_power_state_check.sh
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

@@ -1,5 +1,6 @@
 unit_files = [
-    'xyz.openbmc_project.fan_ctrl.service'
+    'xyz.openbmc_project.power_ctrl.service'
+    'host_power_state_check.service'
 ]
 
 foreach u : unit_files

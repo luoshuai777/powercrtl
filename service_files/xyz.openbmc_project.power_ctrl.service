@@ -1,0 +1,13 @@
+[Unit]
+Description=Host Power Ctrl
+Requires=host_power_state_check.service
+After=host_power_state_check.service
+
+[Service]
+ExecStart=/usr/bin/powerctrl
+Restart=always
+Type=dbus
+BusName=xyz.openbmc_project.power_ctrl_service
+
+[Install]
+WantedBy=multi-user.target

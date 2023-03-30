@@ -1,11 +1,11 @@
-# use to create a fanctrl interface
-subdir('xyz/openbmc_project/fanctrl')
+# use to create a powerctrl interface
+subdir('xyz/openbmc_project/powerctrl')
 
 executable(
-  'fan_ctrl_speed',
+  'powerctrl',
   'main_server.cpp',
-  fanctrl_cpp,
-  fanctrl_hpp,
+  powerctrl_cpp,
+  powerctrl_hpp,
   dependencies: [
     sdbusplus_dep,
     phosphor_logging_dep,

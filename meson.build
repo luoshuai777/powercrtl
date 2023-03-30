@@ -1,4 +1,4 @@
-project('openbmc-fan_ctrl', 'cpp',
+project('openbmc-power_ctrl', 'cpp',
     default_options: [
       'buildtype=debugoptimized',
       'cpp_std=c++20',
@@ -15,7 +15,7 @@ phosphor_logging_dep = dependency('phosphor-logging')
 dbus_dep = dependency('phosphor-dbus-interfaces')
 sdbuspp = find_program('sdbus++')
 
-subdir('10_dbus_fan')
+subdir('10_dbus_powerctrl')
 
 #add conf blow
 systemd = dependency('systemd')
