@@ -1,5 +1,5 @@
 #include <boost/asio.hpp>
-#include <xyz/openbmc_project/fanctrl/server.hpp>
+#include <xyz/openbmc_project/powerctrl/server.hpp>
 #include <phosphor-logging/lg2.hpp>
 #include <sdbusplus/asio/connection.hpp>
 #include <sdbusplus/asio/object_server.hpp>
@@ -28,9 +28,9 @@ class Test : public TestInherit
 	ifstream infile;
 	infile.open("/sys/class/gpio/gpio807/value");
 	infile.getline(data,1);
-      if(data[0] == '1')
+      	if(data[0] == '1')
             currentState("Off");
-      else
+      	else
             currentState("On");
 	infile.close();
 	memset(data,0,sizeof(data));
@@ -54,7 +54,7 @@ int main(int, char const**)
     sdbusplus::server::manager_t objManager(*bus,
                                             "/xyz/openbmc_project/host_power_interface");
     xyz::openbmc_project::powerctrl::Test test1(
-		*bus, "/xyz/openbmc_project/host_fan_interface/powerctrl");
+		*bus, "/xyz/openbmc_project/host_power_interface/powerctrl");
         
     bus->request_name("xyz.openbmc_project.power_ctrl_service");
     io.run();
