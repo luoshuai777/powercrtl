@@ -23,7 +23,7 @@ class Test : public TestInherit
     Test(sdbusplus::bus_t& bus, const char* path) : TestInherit(bus, path)
     {
         std::cout << "Test::Test()" << std::endl;
-	char data[0];
+	char data[1];
 
 	ifstream infile;
 	infile.open("/sys/class/gpio/gpio807/value");
