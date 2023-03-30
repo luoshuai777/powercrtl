@@ -3,7 +3,7 @@ powerctrl_hpp = custom_target(
     capture: true,
     command: [
         sdbuspp,
-        '-r', meson.source_root() / '10_dbus_fan/interfaceAdded_yaml_object_interface_power_ctrl',
+        '-r', meson.source_root() / '10_dbus_powerctrl/interfaceAdded_yaml_object_interface_power_ctrl',
         'interface',
         'server-header',
         'xyz.openbmc_project.powerctrl',
@@ -19,7 +19,7 @@ powerctrl_cpp = custom_target(
     capture: true,
     command: [
         sdbuspp,
-        '-r', meson.source_root() / '10_dbus_fan/interfaceAdded_yaml_object_interface_power_ctrl',
+        '-r', meson.source_root() / '10_dbus_powerctrl/interfaceAdded_yaml_object_interface_power_ctrl',
         'interface',
         'server-cpp',
         'xyz.openbmc_project.powerctrl',
